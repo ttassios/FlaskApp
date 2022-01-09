@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block body %}
+  <br>
+  <br>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Όνομα</th>
+      <th scope="col">Επώνυμο</th>
+      <th scope="col">Τηλέφωνο</th>
+      <th scope="col">Ημερομηνία</th>
+      <th scope="col">Ώρα</th>
+      <th scope="col">Αλλαγή</th>
+      <th scope="col">Διαγραφή</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for addition in additions %}
+    <tr>
+      <th scope="row">{{addition.guest_id}}</th>
+      <td>{{addition.firstname}}</td>
+      <td>{{addition.surname}}</td>
+      <td>{{addition.phonenumber}}</td>
+      <td>{{addition.date}}</td>
+      <td>{{addition.time}}</td>
+      <td><a href="/guests/{{addition.guest_id}}">Edit</a></td>
+      <td><a href="/deleteguest/{{addition.guest_id}}">Delete</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

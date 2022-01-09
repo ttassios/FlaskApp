@@ -1,0 +1,22 @@
+{% extends 'base2.html' %}
+{% block title %}Login{% endblock %}
+{% block form %}
+    <section class="formes">
+        <h2>Είσοδος χρήστη </h2>
+        <br>
+    <p>{{invalid}}</p>
+    <form action = "loggedin.html" method="post">
+        <dl>
+            <dt>Όνομα χρήστη:</dt>
+            <dd>
+                <input type="text" name="username" placeholder="Username">
+            </dd>
+            <dt>Κωδικός χρήστη:</dt>
+            <dd>
+                <input type="password" name="password" placeholder="Password">
+            </dd>
+        </dl>
+        <p><input type = submit value = Είσοδος </p>
+    </form>
+</section>
+{% endblock %}

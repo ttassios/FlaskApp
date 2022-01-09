@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>Καλώς ήρθες {{session['username']}} </h2>
+<br>
+<h3>Δημιούργησε ένα νέο ραντεβού συμπληρώνοντας την φόρμα:</h3>
+<br>
+<section class="formes">
+    <p>{{mesg}}</p>
+<form action ="/addguest" method="post">
+        <dl>
+            <dt>'Ονομα:</dt>
+            <dd>
+                <input type="text" name="firstname">
+            </dd>
+            <dt>Επώνυμο:</dt>
+            <dd>
+                <input type="text" name="surname">
+            </dd>
+             <dt>Τηλέφωνο:</dt>
+            <dd>
+                <input type="text" name="phonenumber">
+            </dd>
+             <dt>Ημέρομηνία:</dt>
+            <dd>
+                <input type="date" name="date">
+            </dd>
+            <dt>Ώρα:</dt>
+            <dd>
+                <input type="time" name="time">
+            </dd>
+        </dl>
+        <p><input type = submit value = Καταχώρηση </p>
+    </form>
+</section>
+{% endblock %}

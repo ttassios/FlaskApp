@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+    <form action="/updateguest" class="formes" method="post">
+        <input type="hidden" name = "guest_id" value = "{{guest[0]}}">
+        <br>
+        Όνομα: <input type="text" name="firstname" value = "{{guest[1]}}">
+        <br>
+        Επώνυμο: <input type="text" name="surname" value = "{{guest[2]}}">
+        <br>
+        Τηλέφωνο: <input type="text" name="phonenumber" value="{{guest[3]}}">
+        <br>
+        Ημερομηνία: <input type="date" name="date" value="{{guest[4]}}">
+        <br>
+         ΄Ωρα: <input type="time" name="time" value="{{guest[5]}}">
+        <br>
+        <input type = submit value = Αλλαγή>
+    </form>
+{% endblock %}

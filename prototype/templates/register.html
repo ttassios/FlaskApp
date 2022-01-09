@@ -1,0 +1,21 @@
+{% extends 'base2.html' %}
+{% block form %}
+    <h2>Δημιουργείστε έναν χρήστη</h2>
+    <br>
+    <section class="formes">
+    <p>{{message}}</p>
+    <form action = "/register.html" method="post">
+        <dl>
+            <dt>'Ονομα χρήστη:</dt>
+            <dd>
+                <input type="text" name ="username" placeholder="Username">
+            </dd>
+            <dt>Κωδικός χρήστη:</dt>
+            <dd>
+                <input type="password" name="password" placeholder="Password">
+            </dd>
+        </dl>
+        <p><input type = submit value = Εγγραφή </p>
+    </form>
+    </section>
+{% endblock %}
